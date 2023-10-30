@@ -8,7 +8,7 @@
     tools:context=".activity.MainActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageView2"
         android:layout_width="118dp"
         android:layout_height="127dp"
         android:layout_marginTop="72dp"
@@ -18,53 +18,58 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/baseline_insert_emoticon_24" />
 
+
     <EditText
-        android:id="@+id/edtEmail"
+        android:id="@+id/edtNomeCad"
+        style="@style/estiloedt"
+
+        android:layout_marginTop="76dp"
+        android:drawableRight="@android:drawable/ic_menu_myplaces"
+        android:hint="Nome"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <EditText
+        android:id="@+id/edtEmailCad"
+        style="@style/estiloedt"
+        android:layout_marginTop="52dp"
         android:drawableRight="@drawable/baseline_alternate_email_24"
         android:hint="Email"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.592"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        style="@style/estiloedt" />
+        app:layout_constraintTop_toBottomOf="@+id/edtNomeCad" />
 
     <EditText
-        android:id="@+id/edtSenha"
+        android:id="@+id/edtSenhaCad"
         style="@style/estiloedt"
-
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="44dp"
         android:drawableRight="@drawable/baseline_remove_red_eye_24"
         android:hint="Senha"
         android:inputType="numberPassword"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.592"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/edtEmailCad" />
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnCad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="15dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="72dp"
         android:background="@drawable/backbotao"
-        android:text="Entrar"
+        android:text="Cadastrar"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtSenha"></androidx.appcompat.widget.AppCompatButton>
-
-    <TextView
-        android:id="@+id/tvCadastrar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Cadastrar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCad" />
+        app:layout_constraintTop_toBottomOf="@+id/edtSenhaCad"></androidx.appcompat.widget.AppCompatButton>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
